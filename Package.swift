@@ -28,7 +28,7 @@ let package = Package(
         ),
         .binaryTarget(
             name: "TestFramework",
-            path: "Packages/TestFramework.xcframework"
+            path: "Frameworks/TestFramework.xcframework"
         )
     ]
 )
