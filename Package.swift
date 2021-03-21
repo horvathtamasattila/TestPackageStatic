@@ -25,5 +25,6 @@ let package = Package(
         .testTarget(
             name: "TestPackageStaticTests",
             dependencies: ["TestPackageStatic"]),
+        .binaryTarget(name: "TestFramework", path: "Frameworks/TestFramework.xcframework")
     ]
 )
