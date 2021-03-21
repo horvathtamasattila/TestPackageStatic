@@ -1,7 +1,7 @@
 public struct TestPackageStatic {
-    public var text = "Hello, World!"
+    public static var text = "Hello, World!"
 
-    public func printText() {
+    public static func printText() {
         print(text)
     }
 }
