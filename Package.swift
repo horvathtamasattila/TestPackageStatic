@@ -21,10 +21,14 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "TestPackageStatic",
-            dependencies: []),
-        .testTarget(
-            name: "TestPackageStaticTests",
-            dependencies: ["TestPackageStatic"]),
-        .binaryTarget(name: "TestFramework", path: "Frameworks/TestFramework.xcframework")
+            dependencies: [
+                "TestFramework"
+            ],
+            path: "Sources"
+        ),
+        .binaryTarget(
+            name: "TestFramework",
+            path: "Packages/TestFramework.xcframework"
+        )
     ]
 )
