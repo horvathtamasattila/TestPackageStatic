@@ -9,7 +9,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "TestPackageStatic",
-            type: .static,
+            type: .dynamic,
             targets: ["TestPackageStatic"]),
     ],
     dependencies: [
@@ -22,7 +22,6 @@ let package = Package(
         .target(
             name: "TestPackageStatic",
             dependencies: [
-                "TestFramework"
             ],
             path: "Sources"
         ),
